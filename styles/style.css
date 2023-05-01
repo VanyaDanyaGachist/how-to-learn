@@ -376,7 +376,7 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  margin: 0;
+  margin: 0; /* убирают отступы */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
