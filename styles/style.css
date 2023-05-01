@@ -10,10 +10,68 @@
 }
 
 .header {
+  background-color: #f2f2f2;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  z-index: 0;
   /* выше установили ограничения для секции */
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.header__title {
+  display: flex;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 600px;
+  width: 730px;
+  margin-left: 64px;
+}
+
+.header__subtitle {
+  width: 388px;
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  line-height: 25px;
+  font-size: 18px;
+  margin: 0px;
+  font-weight: normal;
+}
+
+.header__logo {
+  background-image: url("../images/logo_place_header.svg");
+  position: absolute;
+  background-size: 100% 100%;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.logo{
+  width: 228px;
+  height: 32px;
+}
+
+.header__logo_place {
+  left: 64px;
+  top: 30px;
+}
+
+.header__illustration {
+  background-color: #2f80ed;
+  background-position: cover;
+  position: absolute;
+  right: 0px;
+  top: 64px;
+  z-index: -2;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -22,10 +80,320 @@
   width: 568px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+.header__main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.centered-block {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.two-columns {
+  margin: 100px 0 100px 0;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+  color: #2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0px;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  margin-top: 0px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.digits {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section-title_place {
+  margin: 100px 0 0 0;
+}
+
+.section-subtitle {
+  width: 60%;
+  margin: 20px 0 0 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.table_place {
+  margin: 0px auto 100px auto;
+}
+
+.table__cell {
+  width: 250px;
+  margin: 60px 0 0 0;
+  text-align: left;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.table__text {
+  margin: 0px;
+  padding-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.feynman {
+  background-color: #f2f2f2;
+  margin-top: 100px;
+  position: relative;
+  z-index: 0;
+  height: 890px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.feynman__title {
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  margin: 100px 0 0 0;
+}
+
+.feynman__subtitle {
+  margin: 70px 0 0 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  position: absolute;
+  margin: 0px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #2f80ed;
+  right: 48px;
+  top: 50%;
+  z-index: -1;
+}
+
+.feynman__image {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 867px;
+  height: 637px;
+  z-index: -2;
+  background-size: cover;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-title_theme_dark {
+  color: white;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.section-title_place_dark {
+  margin: 90px 0 0 0;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+  width: 60%;
+  margin: 20px 0 0 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.table_place_dark {
+  margin: 0px auto 90px auto;
+}
+
 .table__cell_theme_dark {
   width: 200px;
+  margin: 80px 0 0 0;
+  text-align: left;
   color: white;
-  margin-right: 0;
-  margin-top: 80px;
 }
+
+.table__heading_theme_dark {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.table__text_theme_dark {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  top: 0px;
+  right: -210px;
+  background-image: url("../images/kaufman-triangle.svg");
+  background-position: cover;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.footer {
+  min-height: 350px;
+  background-color: #1f1f1f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.footer__columns {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0 40px 0;
+}
+
+.footer__column-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__logo {
+  object-fit: cover;
+  margin: 0;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 18px 0;
+}
+
+.footer__column_info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+}
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+}
+
+.columns__link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__column-social {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 0;
+}
+
